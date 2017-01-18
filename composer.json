@@ -1,0 +1,27 @@
+{
+  "name": "p-server-cms/sro-unique",
+  "description": "ZendFramework Module for pServer, SRO Unique",
+  "keywords": [
+    "framework",
+    "zf",
+    "sro-unique",
+    "p-server"
+  ],
+  "homepage": "https://github.com/PServerCMS/SROUnique",
+  "autoload": {
+    "psr-4": {
+      "PServerCMS\\SROUnique\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Oliver",
+      "email": "kokspflanze@protonmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0.6",
+    "kokspflanze/p-server-core": "~1.2",
+    "kokspflanze/p-server-sro": "~1.0"
+  }
+}
