@@ -7,6 +7,7 @@
     "sro-unique",
     "p-server"
   ],
+  "license": "MIT",
   "homepage": "https://github.com/PServerCMS/SROUnique",
   "autoload": {
     "psr-4": {

@@ -1,0 +1,24 @@
+<?php
+if ($this->uniqueKillList) :
+    ?>
+    <div>
+        <h3>Last <?= $this->limit ?> Unique Kills</h3>
+        <hr/>
+        <ul class="list-unstyled">
+            <?php
+            /** @var \PServerCMS\SROUnique\Shard\Entity\UniqueKillList $uniqueKill */
+            foreach ($this->uniqueKillList as $uniqueKill) :
+                ?>
+                <li>
+                    <a href="<?= $this->url('PServerRanking/character', ['id' => $uniqueKill->getCharacter()->getId()]) ?>"><?= $uniqueKill->getCharacter()->getName() ?></a>
+                    killed <b><?= $uniqueKill->getUniqueInfo()->getName() ?></b> at <?= $this->dateTimeFormatTime($uniqueKill->getTime()) ?>
+                </li>
+                <br>
+                <?php
+            endforeach;
+            ?>
+        </ul>
+    </div>
+    <?php
+endif;
+?>
