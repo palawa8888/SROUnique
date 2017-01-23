@@ -3,6 +3,7 @@
 namespace PServerCMS\SROUnique\View\Helper;
 
 use Interop\Container\ContainerInterface;
+use PServerCMS\SROUnique\Service\UniqueKillList as UniqueKillListService;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 class UniqueKillListFactory implements FactoryInterface
@@ -15,7 +16,7 @@ class UniqueKillListFactory implements FactoryInterface
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return new UniqueKillList();
+        return new UniqueKillList($container->get(UniqueKillListService::class));
     }
 
 }
